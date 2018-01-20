@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="iDviceMe.views.Login">
+	<ContentPage.Content>
+            <StackLayout x:Name="MasterLayout">
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Source="loginIcon.png" Margin="0,80,0,0"/>
+             </StackLayout>
+           <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                    <OnIdiom.Phone> 40,0,40,70</OnIdiom.Phone>
+                    <OnIdiom.Tablet> 140,150,140,0</OnIdiom.Tablet>
+                     </OnIdiom>
+                    </StackLayout.Padding>
+
+                    <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="true"/>
+                
+                <Label x:Name="lbl_Name" Text="Username"/>
+                <Entry x:Name="usr_Name" Placeholder="Username"/>
+                <Label x:Name="lbl_password" Text="Password"/>
+                <Entry x:Name="usr_password" Placeholder="Password"/>
+                <Button x:Name="btn_Signin" Text="Sign In" Clicked="SignInProcedure"/>
+                 
+            </StackLayout> 
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
